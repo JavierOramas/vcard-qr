@@ -228,17 +228,3 @@ class ContactInfo:
 
         # Save the QR code image
         qr_image.save('contact_qr.png')
-
-contact = ContactInfo(
-    formatted_name="Javier Oramas",
-    telephone="+53 59334374",
-    email="javier@oramas.dev",
-    url="https://oramas.dev",
-    street="123 Main St",
-    city="Anytown",
-    region="CA",
-    postal_code="12345",
-    country="USA",
-    logo="logo.png"
-)
-contact.generate_qr()   
