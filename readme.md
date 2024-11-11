@@ -111,4 +111,4 @@ Have questions? Found a bug? Please open an issue! 🐞
 
 ---
 
-Made with ❤️ by JOramas
+Made with ❤️ by [JOramas](https://github.com/JavierOramas)
