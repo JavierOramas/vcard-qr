@@ -21,10 +21,8 @@ with col2:
     given_name = st.text_input("Given Name")
     additional_name = st.text_input("Middle Name")
     name_prefix = st.text_input("Name Prefix (e.g., Dr.)")
-    name_suffix = st.text_input("Name Suffix (e.g., Jr.)")
     
     # Personal info
-    nickname = st.text_input("Nickname")
     birthday = st.date_input("Birthday", value=None)
     anniversary = st.date_input("Anniversary", value=None)
     gender = st.selectbox("Gender", ["", "M", "F", "O", "N", "U"])
@@ -34,7 +32,7 @@ with col3:
     title = st.text_input("Job Title")
     role = st.text_input("Role/Occupation")
     organization = st.text_input("Organization")
-    
+
     # Contact info
     url = st.text_input("Website URL")
     im_address = st.text_input("IM Address")
@@ -83,8 +81,6 @@ if st.button("Generate QR Code"):
             given_name=given_name,
             additional_name=additional_name,
             name_prefix=name_prefix,
-            name_suffix=name_suffix,
-            nickname=nickname,
             photo=photo_path,
             birthday=str(birthday) if birthday else "",
             anniversary=str(anniversary) if anniversary else "",

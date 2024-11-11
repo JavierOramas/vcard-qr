@@ -115,8 +115,8 @@ class ContactInfo:
         # RELEVANT FIELDS
         self.card.add('fn').value = self.formatted_name
         self.card.add('n').value = vobject.vcard.Name(
-            family=self.family_name or 'Doe',
-            given=self.given_name or 'John',
+            family=self.family_name,
+            given=self.given_name,
             additional=self.additional_name,
             prefix=self.name_prefix,
             suffix=self.name_suffix
@@ -126,8 +126,10 @@ class ContactInfo:
         if self.email:
             self.card.add('email').value = self.email
 
+        if self.organization:
+            self.card.add('org').value = [self.organization]  # Wrap in list as vobject expects org as a sequence
+
         self.card.add('title').value = self.title
-        self.card.add('org').value = self.organization
 
 
         # OPTIONAL FIELDS
